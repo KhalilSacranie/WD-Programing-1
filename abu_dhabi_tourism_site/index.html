@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- Meta tags for character set and viewport settings -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Abu Dhabi Tourism</title>
+  <!-- Link to external CSS files -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <!-- Importing Leaflet.js library for interactive maps -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
   <div class="container">
+    <!-- Header section with title and navigation links -->
     <div class="header">
-      <h1>Welcome to Abu Dhabi Tourism</h1>
-      <div class="links">
+      <div class="header-title">
+        <h1>Welcome to Abu Dhabi Tourism</h1>
+      </div>
+      <div class="header-links">
         <a href="index.html">Home</a>
         <a href="history.html">History</a>
         <a href="visit.html">Visit</a>
       </div>
+    </div>
+
+    <div class="page">
+      <!-- Hero section with a main title -->
+      <div class="hero">
+        <h1 class="hero-title">The Capital of the United Arab Emirates</h1>
+      </div>
+
+      <!-- Information section about Abu Dhabi -->
+      <div class="info-section">
+        <h2>Abu Dhabi</h2>
+        <p>Abu Dhabi is the capital of the United Arab Emirates and the largest of the seven emirates. It is the center of government and business life in the UAE, headquarters of the emirates oil operating companies and embassies are based in the city. The city is characterized by its modern architecture, luxury shopping, and a vibrant nightlife scene. The city is also home to the famous Sheikh Zayed Grand Mosque, one of the largest mosques in the world.</p>
+
+        <h2>Climate</h2>
+        <p>Abu Dhabi has a hot desert climate with high temperatures and sunny skies throughout the year. The city experiences very little rainfall, with most of it occurring during the winter months. The summer months are extremely hot, with temperatures often exceeding 40 degrees Celsius.</p>
+
+        <h2>Things to Do</h2>
+        <p>Abu Dhabi offers a wide range of activities and attractions for visitors to enjoy. Some of the top things to do in the city include:</p>
+
+        <ul>
+          <li><a href="https://www.szgmc.gov.ae/en/Home" target="_blank">Visit the Sheikh Zayed Grand Mosque</a></li>
+          <li><a href="https://www.louvreabudhabi.ae/" target="_blank">Explore the Louvre Abu Dhabi</a></li>
+          <li><a href="https://www.mandarinoriental.com/en/abu-dhabi/emirates-palace/explore" target="_blank">Visit the Emirates Palace</a></li>
+          <li><a href="https://www.thegalleria.ae/en" target="_blank">Go shopping at the Galleria Mall</a></li>
+          <li><a href="https://www.ferrariworldabudhabi.com/" target="_blank">Experience the thrill of Ferrari World</a></li>
+        </ul>
+      </div>
+
+      <!-- Div for displaying the interactive street map -->
+      <div id="street-map"></div>
+
+      <script>
+        // Initialize the map and set its view to Abu Dhabi's coordinates
+        var map = L.map('street-map').setView([24.4539, 54.3773], 12);
+        // Add OpenStreetMap tiles to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker([24.4539, 54.3773]).addTo(map)
+                .bindPopup('Abu Dhabi') // Bind a popup to the marker
+                .openPopup(); // Open the popup by default
+      </script>
+
     </div>
   </div>
 </body>

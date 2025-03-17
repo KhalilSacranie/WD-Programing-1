@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and viewport settings -->
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visit Abu Dhabi</title>
+  <!-- Link to external CSS files -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="visit.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Importing jQuery, Popper.js, and Bootstrap JS libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid" style="padding: 0;">
+  <!-- Header section with title and navigation links -->
   <div class="header">
-    <h1>Visit Abu Dhabi</h1>
-    <div class="links">
+    <div class="header-title">
+      <h1>Visit Abu Dhabi</h1>
+    </div>
+    <div class="header-links">
       <a href="index.html">Home</a>
       <a href="history.html">History</a>
       <a href="visit.html">Visit</a>
     </div>
   </div>
+
+  <!-- Hero section with a main title -->
+  <div class="hero">
+    <h1 class="hero-title">Visit Our Town</h1>
+  </div>
+
+  <!-- Main content section -->
+  <div class="page">
+    <div class="row" style="margin: 0; padding: 3em 1em;">
+      <!-- Column with information about activities in Abu Dhabi -->
+      <div class="col-md-7" style="padding-right: 5em;">
+        <h2>What to do in Abu Dhabi?</h2>
+        <p>Explore the stunning Sheikh Zayed Grand Mosque, enjoy the thrilling rides at Ferrari World, and relax on the beautiful Corniche Beach. Don't miss the cultural experiences at the Louvre Abu Dhabi and Qasr Al Watan.</p>
+        <ul>
+          <li>Sheikh Zayed Grand Mosque</li>
+          <li>Ferrari World</li>
+          <li>Corniche Beach</li>
+          <li>Louvre Abu Dhabi</li>
+          <li>Qasr Al Watan</li>
+        </ul>
+      </div>
+      <!-- Column with information about getting to Abu Dhabi -->
+      <div class="col-md-5">
+        <h2>Getting to Abu Dhabi</h2>
+        <p>Abu Dhabi is well-connected by air, with Abu Dhabi International Airport serving as the main gateway. You can also reach Abu Dhabi by road from Dubai and other parts of the UAE.</p>
+        <!-- Card with information about air travel -->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">By Air</h5>
+            <p class="card-text">Abu Dhabi International Airport is the main airport serving the city, with flights from major international destinations.</p>
+          </div>
+        </div>
+        <!-- Card with information about road travel -->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">By Road</h5>
+            <p class="card-text">Abu Dhabi is easily accessible by road from Dubai and other parts of the UAE. The journey from Dubai takes about 1.5 hours by car.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </div>
 </body>
 </html>
